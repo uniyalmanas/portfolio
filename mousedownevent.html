@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mousedownevent</title>
+</head>
+<body>
+    <p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()"> Click the text ! Mousedown() function is triggered when the mouse button is pressed down over this paragraph, and sets the color of the text to red .The mouse Up() function is triggered when the mouse button is released , and sets the color of the text to green </p>
+
+
+
+    <script>
+function mouseDown(){
+    document.getElementById("myP").style.color="red";
+}
+function mouseUp(){
+    document.getElementById("myP").style.color="green";
+}
+
+// THEORY 
+// 1-onmousedown()
+// 2-onmouseup()
+// 3-onmouseenter()  ->mouse ko div k andar le jate hi red color me badal jayagaa
+// 4-onmouseleave() -> mouse ko us tag se bahar le jaate hi  kisi or color me change ho jayagaa ...
+
+
+    </script>
+</body>
+</html>

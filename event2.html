@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <style>
+           body
+           {
+            background-color: rgba(11, 10, 10, 0.963);
+            color: white;
+            text-align: center;
+           
+           }
+           button{
+            width: 15vmax;
+            height: 4.5vmax;
+            color: white;
+            background-color : rgba(11, 10, 10, 0.963);
+            border: none;
+            border-radius: 3.5vmax;
+
+           }
+           button::backdrop{
+            background-color: brown;
+           }
+           
+        </style>
+
+</head>
+<body>
+    
+    <h1 id="id1">  Hey welcome to my channel -</h1>
+    
+    <p>
+        A lesson on EVENT LISTNERS.
+    </p>
+
+    <button id=" id2" onclick=" clickme()"> click me </button>
+
+    <p> function id triggererd when the user is pressing a key in the input field</p>
+    <br>
+    <br><br>
+    <input type="text" class="effect-1" onkeypress="keypress() " onkeydown =" keyDown()" onkeyup="keyup()">
+    <p id="keys"> </p>
+
+    <div class="main-div">
+        <div>
+
+            <label for=" "> your name </label>
+            <input type="text" name=" " id="ice">
+            <br>
+            <label for=""> choose an icecream flavor😋
+                <select name="ices" id="ices" onchange=" selectelement()"> 
+                <option value=""> select one </option>
+                <option value="chocolate">chocolate</option>
+                <option value="sardine">sardine</option>
+                <option value="vanilla">vanilla</option>
+                </select>
+            </label>
+         <br> 
+        </div>
+<div id="result"> </div>
+    </div>
+</body>
+
+<script>
+const selectelement=()=>{
+    const inputchange=document.getElementById('ice').value;
+const icecreams=document.getElementById('ices').value;
+console.log(`${inputchange} and ${icecreams}`);
+}
+
+const keyDown=()=>{
+    document.getElementById('keys').innerHTML='key is down';
+}
+const keyup=()=>{
+    document.getElementById('keys').innerHTML='key is up';
+}
+
+var onclick=()=>{
+    console.log(event);
+    console.log(event.target);
+    console.log(event.type);
+    
+}
+
+</script>
+</html>

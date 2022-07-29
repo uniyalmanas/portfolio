@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+body{
+    background-color: rgba(30, 2, 41, 0.909);
+    display: grid;
+    place-items: center;
+    font-family:monospace ;
+}
+
+p{
+    text-align: center;
+    color: white;
+}
+h1{
+    color: aqua;
+}
+h2{
+    color: rgb(144, 14, 105);
+}
+button{
+    color:white;
+    background-color: rgb(7, 146, 9);
+    width: 20vmax;
+    height:8vmax;
+    border-radius: 2vmax;
+}
+form{
+    border: 1px solid black;
+    margin-top: 5vmax;
+    height: 5vmax;
+    width: 30vmax;
+    text-align: center;
+    padding: 2vmax;
+    color: white;
+}
+.para{  
+    color: rgb(4, 94, 251);
+}
+</style>
+
+<body>
+
+
+    <p class="para"> hii i am manas</p>
+    <p class="para"> I am gaurav</p>
+    <p> we are students of Youtube University</p>
+   
+    <button  onclick="clickme()"> CLICK ME </button>
+    <h1 id="heading"> My name is manas uniyal </h1>
+   
+     <h2 id="heading2">
+        This is for the heading 2 
+     </h2>
+     <button id="heading3"> click me </button>
+    <!-- html form details  -->
+<form action="">
+    <label for=""> male</label>
+    <input type="radio" name="gender" id=" ">
+    <label for="">female</label>
+    <input type="radio"name="gender"id="">
+  
+</form>
+
+    <script>
+ var count=0;
+  var heading=document.getElementById('heading');
+var clickme=()=>{
+    count++;
+    if(count%2==1)
+    heading.innerHTML=" My name is Mahesh ";
+    else
+    heading.innerHTML="my name is Gaurav Harbola";
+}  
+  var a= document.getElementsByName('gender');
+   console.log(a);
+   const h2=document.querySelector("#heading2");
+   const h3=document.querySelector("#heading3");
+   
+   h3.addEventListener('click',()=>{
+    count++;
+    if(count%2==1)
+    h2.innerHTML=" Click me once ";
+    else
+    h2.innerHTML="Click me twice"
+    })
+
+   // we covered - getElementsByName
+//    getElementById
+//    getElementByclassname
+// we will cover - querySelectors 🐱‍🏍🐱‍🏍🤓🤓
+
+//  --? It can be used for ID and class at the same tim e, just use .class operator and # id operator 
+// to get the required  selections
+
+// 1-💥🐱‍👤 document.querySelector - ye apk frst matching element ka data select kar sakta hai , or aap use change bhee kar sakte ho ...
+
+// 2-🐱‍👤 document.querySelectorAll -ye apk har element ko select kar sakta hai , jisko apne id yaa fir class se select karwaya ho or jiako aap select karwana chahte ho or change karwana chahte ho ...
+
+//  //differences : get selemenbt ID vs       queryselector  
+
+//  1- What if you want to get the HTML content of the third li ?
+//  you will not be able to use getelement getElementById because there is no ID associated with it . But you can use query selector when there is no ID given to the TAG .
+
+
+    </script>
+</body>
+</html>

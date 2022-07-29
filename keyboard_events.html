@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body
+        {
+         background-color: rgba(11, 10, 10, 0.963);
+         color: white;
+         text-align: center;
+        
+        }
+        button{
+         width: 15vmax;
+         height: 4.5vmax;
+         color: white;
+         background-color : rgba(11, 10, 10, 0.963);
+         border: none;
+         border-radius: 3.5vmax;
+
+        }
+        button::backdrop{
+         background-color: brown;
+        }
+        
+     </style>
+
+</head>
+<body>
+    <div class="main-div">
+        <div>
+
+            <label for=" "> your name </label>
+            <input type="text" name=" " id="ice">
+            <br>
+            <label for=""> choose an icecream flavor😋
+                <select name="ices" id="ices" onchange=" selectelement()"> 
+                <option value=""> select one </option>
+                <option value="chocolate">chocolate</option>
+                <option value="sardine">sardine</option>
+                <option value="vanilla">vanilla</option>
+                </select>
+            </label>
+         <br> 
+        </div>
+<div id="result"> </div>
+    </div>
+<script>
+const selectelement=()=>{
+console.log( " I clicked");
+const value= document.getElementById('ices').value;
+console.log(value);
+}
+
+
+</script>
+</body>
+
+</html>
